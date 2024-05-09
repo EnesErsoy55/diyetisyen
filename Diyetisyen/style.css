@@ -6,6 +6,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  background: rgba(102, 102, 102, 0.12) !important;
+}
 
 /* Login Page */
 .container-login {
@@ -72,9 +75,74 @@
 
 /* Login Page */
 
+
+/* Thema Button Css */
+
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+/* Thema Button Css */
+
 /* HomePage */
 .nav-bar {
   padding: 10px;
+  margin-bottom: 20px;
 }
 .nav-bar,
 .nav-end,
@@ -128,6 +196,23 @@
 
 .notification {
   width: 25px;
+  position: relative;
+}
+.not-count {
+  display: block;
+  background: rgb(255, 0, 0);
+  min-width: 15px;
+  min-height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.not-count p {
+  margin: 0;
+  color: white;
+  font-size: 10px;
+  text-align: center;
 }
 .user-menu {
   display: flex;
@@ -138,6 +223,26 @@
   border-radius: 50%;
   border: 2px #d5b600 solid;
 }
+.user-menu-top{
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+.user-menu-img{
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.user-menu-dropdown{
+  padding: 15px !important;
+}
+.user-menu-top .name{
+  font-size: 12px;
+}
+.user-menu-top .mail{
+  font-size: 10px;
+}
+
 /*  navbar end */
 
 /*  main container */
@@ -306,88 +411,154 @@
   background: #ecbf2b;
   color: white;
 }
-.buttons-ortak:hover p{
-    font-size: 12px;
+.buttons-ortak:hover p {
+  font-size: 12px;
 }
 .buttons-ortak:hover path {
   fill: #ffffff;
 }
 
-
 /* alt başlıklar */
-.sekme-title{
-    padding: 0 var(--main-padding);
+.sekme-title {
+  padding: 0 var(--main-padding) 50px;
 }
-.sekme-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid rgba(128, 128, 128, 0.444);
-    padding: 20px;
-    height: 300px;
+.sekme-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgba(128, 128, 128, 0.444);
+  padding: 20px;
+  height: 300px;
 }
 .hizmet-box p {
-    font-size: 12px;
+  font-size: 12px;
 }
-.aktif-hizmet{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: #8b5cf6;
-    border-radius: 50px;
-    width: 100%;
+.aktif-hizmet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #8b5cf6;
+  border-radius: 50px;
+  width: 100%;
 }
-.aktif-hizmet svg{
-    width: 25px;
-    fill: white;
+.aktif-hizmet svg {
+  width: 25px;
+  fill: white;
 }
 .aktif-hizmet p {
-    text-align: end;
-    font-weight: 700;
-    color: white;
-    margin: 0;
+  text-align: end;
+  font-weight: 700;
+  color: white;
+  margin: 0;
 }
 
-.green-point{
-    background: green;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+.green-point {
+  background: green;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
-.hizmet-time{
-    background:rgb(255, 102, 0);
-    border-radius: 10px;
-    padding: 2px 5px;
-    color: white;
+.hizmet-time {
+  background: rgb(255, 102, 0);
+  border-radius: 10px;
+  padding: 2px 5px;
+  color: white;
 }
-.last-time{
-    background: purple;
-    color: white;
-    padding: 2px 5px;
-    border-radius: 10px;
-    width: fit-content;
+.last-time {
+  background: purple;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 10px;
+  width: fit-content;
 }
-.randevular{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: orange;
+.randevular {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: orange;
 }
 .randevular p {
-    text-align: end;
-    font-weight: 700;
-    color: white;
-    margin: 0;
+  text-align: end;
+  font-weight: 700;
+  color: white;
+  margin: 0;
 }
-.randevular svg{
-    width: 25px;
+.randevular svg {
+  width: 25px;
+}
+.pay-green {
+  background: #21c55d;
+}
+.pay-red {
+  background: red;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 50px;
+  width: 100%;
+}
+.payment svg {
+  width: 25px;
+}
+
+.payment p {
+  text-align: end;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+.faturalar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.235);
+}
+.date-miktar * {
+  margin: 0;
+  padding: 0 10px;
+}
+.date p {
+  font-weight: 700;
+}
+.miktar p {
+  font-weight: 100;
+  font-style: italic;
+}
+.paid {
+  background: #84cc15;
+  color: white;
+  padding: 7px;
+  border-radius: 10px;
+}
+.paid p {
+  margin: 0;
+}
+.payable {
+  background: red;
+  color: white;
+  padding: 7px;
+  border-radius: 10px;
+}
+.payable p {
+  margin: 0;
+  font-size: small;
 }
 /* alt başlıklar */
 /*  main container */
 
 /* HomePage */
+
+
+
+

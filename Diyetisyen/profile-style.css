@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding: 0 30px !important;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head .back-btn {
+  border: 0;
+  padding: 5px 10px;
+  color: white;
+  background: #94a3b8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-btn-img{
+  width: 20px;
+  margin-right: 8px;
+}
+img {
+  width: 50px;
+}
+.profile-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  border: 1px solid rgba(136, 136, 136, 0.397);
+  padding: 20px;
+}
+.details {
+  background: rgb(128, 128, 128);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+.profile-detail-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(128, 128, 128, 0.121);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px 0;
+}
+.profile-detail-box * {
+  margin: 0 10px;
+}
+.profile-detail-box img {
+  width: 50px;
+}
+.detail-box p:first-child {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+.detail-box p:last-child {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+  text-align: center;
+}
+
+.profile-img-title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.profile-img-detail-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-image img {
+  width: 50%;
+}
+.img-file-text-box p:first-child {
+  font-weight: 200;
+}
+.img-file-text-box p:last-child {
+  font-size: small;
+}
+.img-file-input::file-selector-button {
+  background: peru;
+  border: 0;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.profile-form-box {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.391);
+}
+
+.passowrd-box-style {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.391);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
